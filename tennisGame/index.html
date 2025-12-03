@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Game</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="scoreBoard">
+            <p id="playerOne">Player 1: </p>
+            <p id="playerTwo"> : Player 2</p>
+        </div>
+        <div class="containerCanvas">
+            <div id="alert">Welcome!</div>
+            <canvas id="gameCanvas"></canvas>
+        </div>
+
+        <div class="containerButton">
+            <button id="btnOne" onclick="stopGame()">Stop</button>
+            <button id="btnTwo" onclick="startGame()">Play</button>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
