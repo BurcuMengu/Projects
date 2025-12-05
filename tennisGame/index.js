@@ -26,6 +26,21 @@ function startGame() {
     stopClickCount = 0;
     alertGame.textContent = "Game Started!"
     alertGame.classList.add("blink");
+
+    setTimeout(() => {
+        let count = 3;
+        alertGame.textContent = count;
+
+        const timer = setInterval(() => {
+            count--;
+            alertGame.textContent = count;
+            if(count === 0) {
+                clearInterval(timer);
+                alertGame.classList.remove("blink");
+                alertGame.style.display = "none";
+            }
+        }, 1000);
+    }, 1000);
 }
 
 function stopGame() {
@@ -38,6 +53,7 @@ function stopGame() {
 
     gameRunning = false;
     stopClickCount++;
+    alertGame.style.display = "block";
     alertGame.textContent = "Game Stopped!";
     alertGame.classList.remove("blink");
 }
